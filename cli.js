@@ -32,5 +32,10 @@ console.log(command)
 var container = execSync(command).toString()
 console.log(container)
 
-console.log('Docker image is now generated:')
+command = 'docker rm -f ' + id
+console.log(command)
+var rm = execSync(command).toString()
+console.log(rm)
+
+console.log('\nDocker image is now generated:')
 console.log(imagename)
