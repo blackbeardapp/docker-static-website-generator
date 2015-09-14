@@ -1,4 +1,9 @@
 # docker-static-website-generator
+
+```
+npm install generate-static -g
+```
+
 Generate a quick docker image that contains a static website.
 
 It is good for generate a image for testing a registry or a service.
