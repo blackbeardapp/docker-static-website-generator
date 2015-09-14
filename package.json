@@ -2,13 +2,16 @@
   "name": "generate-static",
   "version": "1.0.0",
   "description": "Generate a quick docker image that contains a static webpage. Good for testing!",
-  "keywords": ["docker", "static"],
+  "keywords": [
+    "docker",
+    "static"
+  ],
   "main": "cli.js",
   "bin": {
     "generate-static": "./bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,8 @@
   "homepage": "https://github.com/blackbeardapp/docker-static-website-generator#readme",
   "dependencies": {
     "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "standard": "^5.2.2"
   }
 }
