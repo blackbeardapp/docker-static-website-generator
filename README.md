@@ -4,9 +4,9 @@
 npm install generate-static -g
 ```
 
-Generate a quick docker image that contains a static website.
+Quickly generate a docker image that contains a static website.
 
-It is good for generate a image for testing a registry or a service.
+It is good for generating an image for testing a registry or a service.
 
 Example:
 
@@ -31,6 +31,6 @@ Here is the psuedo code:
 generate-static imagename [html]
 ```
 
-`imagename`: the docker image the result will have
+`imagename`: the resulting docker image's name
 
 `html` (optional): the html that will be put into index.html
