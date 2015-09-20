@@ -1,9 +1,16 @@
-var argv = require('minimist')(process.argv.slice(2))
+var minimist = require('minimist')
+var argv = minimist(process.argv.slice(2), {
+  boolean: 'p'
+})
 var execSync = require('child_process').execSync
+
+console.log(argv)
 
 if (argv.h || argv.help || argv._.length === 0) {
   var docs = [
     'Usage: generate-static name [html]',
+    '',
+    '-p Push the container after it has been made.'
   ]
   console.log(docs.join('\n'))
   process.exit(0)
@@ -35,3 +42,8 @@ console.log(rm)
 
 console.log('\nDocker image is now generated:')
 console.log(imagename)
+
+if(argv.p) {
+  var push = run('docker push ' + imagename)
+  console.log(push)
+}
